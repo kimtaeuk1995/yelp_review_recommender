@@ -5,7 +5,7 @@ Nowadays, personalized recommendation systems are implemented by many online bus
 
 # Methodologies
 
-I used natural language processing and unsupervised learning as an approach to the finding different aspects of restaurant experience.
+I used natural language processing and unsupervised learning as an approach to the finding different aspects of restaurant experience. The topic modeling allowed me to find 15 categories of food and 4 main aspects of restaurant experience that will later be used as a rating system for recommender system. 
 
 Workflow:
 
@@ -18,6 +18,7 @@ Workflow:
   * count-vectorizing: best to maintain importance of commonly used words such as "consciousness", so I decided to forgo TF-IDF after trying it.
   * SpaCy lemmatization (most effective out of all tried)
   * stop_words and min_df (min_df set to 0.02 yielded best topics)
+  
 *Topic Modeling
   * LSA/NMF as baseline
   * LDA
@@ -31,4 +32,4 @@ Workflow:
 # Findings, Implications and Conclusions
 With these methods, I was able to uncover 4 main aspects a user considers important when it comes to rating restaurant experience. Furthermore, I was able to utilize a weighted importance of these aspects to better recommend restaurant based on user input. 
 
-I hope to adopt a hybrid approach to build a personalized restuarant recommender using basic interaction information between itens and users. 
+I hope to adopt a hybrid approach to build a personalized restuarant recommender using interaction information between itens and user utilizing LightFM model. The matrix factorization model can capture latent features about attributes of users and items, which represent their tastes as well. 
